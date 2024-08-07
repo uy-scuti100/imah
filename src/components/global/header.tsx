@@ -30,6 +30,7 @@ export default function Header() {
 			path: "/#contact",
 		},
 	];
+	// sk-tyYPdsb4UFugpj7LKDVnN959RIjWkJakpby4JQTsuzT3BlbkFJKkcPmk_r9bjR8LgWFWOTJ9KzVYfeNptuoD3opaWvYA
 	return (
 		<header className="fixed w-full mx-auto flex justify-center  bg-white z-[500]">
 			<nav className="flex items-center justify-between max-w-[1280px]  px-6 py-10 w-full bg-white backdrop-blur-3xl">
