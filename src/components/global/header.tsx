@@ -2,12 +2,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Header() {
 	const [openNav, setOpenNav] = useState(false);
 	function toggleNav() {
 		setOpenNav((prev) => !prev);
 	}
+	useEffect(() => {
+		document.body.style.overflow = openNav ? "hidden" : "auto";
+	}, [openNav]);
+
 	const links = [
 		{
 			name: "Home",
@@ -30,7 +34,6 @@ export default function Header() {
 			path: "/#contact",
 		},
 	];
-	// sk-tyYPdsb4UFugpj7LKDVnN959RIjWkJakpby4JQTsuzT3BlbkFJKkcPmk_r9bjR8LgWFWOTJ9KzVYfeNptuoD3opaWvYA
 	return (
 		<header className="fixed w-full mx-auto flex justify-center  bg-white z-[500]">
 			<nav className="flex items-center justify-between max-w-[1280px]  px-6 py-10 w-full bg-white backdrop-blur-3xl">
@@ -83,14 +86,14 @@ export default function Header() {
 					<Image src={"times.svg"} alt="menu" width={36} height={34} />
 				</div>
 
-				<div className="mt-5 flex justify-center h-full flex-col gap-8 p-10">
+				<div className="mt-5 flex justify-center h-[80%] flex-col gap-8 p-10">
 					{links.map((nav: { name: string; path: string }) => {
 						const { name, path } = nav;
 						return (
 							<Link
 								href={path}
 								key={name}
-								className="text-7xl"
+								className="text-5xl"
 								onClick={toggleNav}
 							>
 								{name}
@@ -102,7 +105,6 @@ export default function Header() {
 		</header>
 	);
 }
-
 const NavLinks = () => {
 	const path = usePathname();
 	const links = [

@@ -32,8 +32,8 @@ export default function Testimonials() {
 				</h3>
 			</div>
 
-			<div className="mt-[35px] hidden md:block">
-				<div className="w-full flex items-center gap-[50px] md:flex-col lg:flex-row">
+			<div className="mt-[35px] ">
+				<div className="flex gap-[50px] flex-row overflow-auto w-full testimonials-container">
 					{testimonials.map((test, index) => {
 						return <TestimonialCard key={index} {...test} index={index} />;
 					})}
@@ -61,7 +61,7 @@ const TestimonialCard = ({
 	index,
 }: TestimonialCardProp) => {
 	return (
-		<div className="p-[25px] md:p-10 w-full bg-[#F2F2F2] flex flex-col gap-[43px]">
+		<div className="p-[25px] md:p-10 min-w-[300px]   bg-[#F2F2F2] flex flex-col gap-[43px] rounded-xl">
 			<div className="flex items-center gap-[15px]">
 				<Image
 					key={index}

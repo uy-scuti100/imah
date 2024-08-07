@@ -16,8 +16,8 @@ export default function Footer() {
 		},
 	];
 	return (
-		<div className="paddy bg-[#f2f2f2] py-20">
-			<div className="md:grid grid-cols-3 w-full border-b pb-[50px] ">
+		<div className="overflow-x-hidden paddy bg-[#f2f2f2] py-20">
+			<div className="md:flex flex-wrap justify-between w-full border-b pb-[50px] ">
 				<div className="md:border-none pb-[35px] md:pb-0 border-b md:order-1">
 					<Image
 						src="logo.svg"
@@ -37,7 +37,7 @@ export default function Footer() {
 					<h4 className="text-sm md:text-lg font-bold">
 						Stay Tuned for updates
 					</h4>
-					<div className="w-[280px] border-b border-black flex items-center relative mt-[25px]">
+					<div className="max-w-[500px] border-b border-black flex items-center relative mt-[25px]">
 						<input
 							type="email"
 							required
