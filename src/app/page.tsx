@@ -9,7 +9,7 @@ import Testimonials from "@/components/sections/testimonials";
 
 export default function page() {
 	return (
-		<div className=" mx-auto md:pt-36 pt-28 flex flex-col w-full justify-center items-center">
+		<div className=" mx-auto pt-36 flex flex-col w-full justify-center items-center overflow-hidden">
 			<HeroSection />
 			<Carousel />
 			<AboutUs />
